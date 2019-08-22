@@ -1,0 +1,129 @@
+/****************************************
+            HELPER CLASSES 
+****************************************/
+.center, .center-column, .top, .right, .bottom, .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-column {
+    flex-direction: column;
+}
+
+.top    { 
+    align-items: flex-start; 
+}
+
+.right  { 
+    justify-content: flex-end;   
+}
+
+.bottom { 
+    align-items: flex-end;   
+}
+.left   { 
+    justify-content: flex-start; 
+}
+
+.single-spaced, .single-spaced * {
+    line-height: 1;
+}
+
+.hero {
+    background: url("images/hero-1.jpg") center / cover;
+}
+
+.navbar-item p:hover{
+    color: white;
+}
+
+/****************************************
+               GRID  
+****************************************/
+#a { 
+    grid-area: a; 
+}
+
+#b {
+     grid-area: b; 
+}
+
+#c { 
+    grid-area: c; 
+}
+
+#d { 
+    grid-area: d; 
+}
+
+#e { 
+    grid-area: e; 
+}
+
+#f { 
+    grid-area: f; 
+}
+
+#grid {
+    display: grid;
+    grid-row-gap: 1rem;
+    grid-template-areas:
+        "a a a a"
+        "b c d e"
+        "f f f f";
+}
+
+@media (max-width: 512px) {
+    #grid {
+        grid-template-areas:
+            "a a a"
+            "b c d"
+            "e e e"
+            "f f f";
+    }
+}
+
+/****************************************
+            ARROW ANIMATION  
+****************************************/
+
+.bounce {
+	-moz-animation: bounce 3s infinite;
+	-webkit-animation: bounce 3s infinite;
+	animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+
+    40% {
+      transform: translateY(-10px);
+    }
+
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+
+/****************************************
+            MEDIA QUERIES  
+****************************************/
+
+@media (max-width: 1024px) {
+    .hero {
+        background: url("images/hero-2.jpg") center / cover;
+    }
+
+    .desktop {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background: url("images/hero-3.jpg") center / cover;
+    }
+}
